@@ -1,1 +1,1444 @@
-Hola Mundo :)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almanza Remodeling LLC | 18 Years of Craftsmanship You Can Trust | Fort Worth, TX</title>
+    <link rel="icon" href="img/logo.ico" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a2332;
+            --secondary-gold: #d4a843;
+            --accent-amber: #f5b942;
+            --charcoal: #3a3a3a;
+            --light-gray: #f4f4f4;
+            --steel-blue: #4a5f7f;
+            --dark-gold: #b8932f;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--charcoal) 100%);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid var(--secondary-gold);
+        }
+
+        nav.scrolled {
+            box-shadow: 0 5px 30px rgba(0,0,0,0.4);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            border: 3px solid var(--secondary-gold);
+            box-shadow: 0 5px 15px rgba(212, 168, 67, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: var(--secondary-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary-gold);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: var(--secondary-gold);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 90px;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--charcoal) 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M50 0v100M0 50h100" stroke="rgba(212,168,67,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 4rem;
+            line-height: 1.1;
+            color: white;
+            margin-bottom: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+
+        .hero-highlight {
+            color: var(--secondary-gold);
+            display: block;
+            font-size: 4.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--secondary-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--secondary-gold);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 168, 67, 0.1) 0%, transparent 70%);
+            transition: all 0.5s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 168, 67, 0.3);
+            background: rgba(212, 168, 67, 0.2);
+        }
+
+        .stat-card:hover::before {
+            transform: rotate(180deg);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--secondary-gold);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 4px solid var(--secondary-gold);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-navy), var(--secondary-gold), var(--primary-navy));
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 3px;
+        }
+
+        .section-header h2::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--secondary-gold);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-gold);
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .about-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary-gold);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .about-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .about-box h3 {
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .about-box i {
+            color: var(--secondary-gold);
+            font-size: 2rem;
+        }
+
+        .about-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .why-choose {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--charcoal) 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            text-align: left;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '✓';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 4rem;
+            color: var(--secondary-gold);
+            opacity: 0.1;
+            font-weight: bold;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 168, 67, 0.3);
+        }
+
+        .benefit-card h4 {
+            font-size: 1.3rem;
+            color: var(--secondary-gold);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .benefit-card h4 i {
+            font-size: 1.5rem;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            border-color: var(--secondary-gold);
+        }
+
+        .service-icon-wrapper {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--steel-blue) 100%);
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            color: var(--secondary-gold);
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.6rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .service-content ul {
+            list-style: none;
+            color: var(--text-light);
+        }
+
+        .service-content li {
+            padding: 0.6rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .service-content li:last-child {
+            border-bottom: none;
+        }
+
+        .service-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: var(--secondary-gold);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .carousel-container {
+            position: relative;
+            margin-top: 3rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 5px solid var(--secondary-gold);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--secondary-gold);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 10;
+            font-weight: bold;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary-navy);
+            color: var(--secondary-gold);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn.prev {
+            left: 20px;
+        }
+
+        .carousel-btn.next {
+            right: 20px;
+        }
+
+        .carousel-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-navy);
+            color: var(--secondary-gold);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            z-index: 10;
+            font-weight: 700;
+            border: 2px solid var(--secondary-gold);
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--charcoal) 100%);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M50 0v100M0 50h100" stroke="rgba(212,168,67,0.03)" stroke-width="1"/></svg>');
+            opacity: 0.5;
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header.light h2 {
+            color: white;
+        }
+
+        .section-header.light .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .contact-btn i {
+            font-size: 1.8rem;
+        }
+
+        .btn-call {
+            background: var(--secondary-gold);
+            color: var(--primary-navy);
+            border-color: var(--secondary-gold);
+        }
+
+        .btn-call:hover {
+            background: transparent;
+            color: var(--secondary-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 168, 67, 0.3);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: transparent;
+            color: #25D366;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-email {
+            background: var(--steel-blue);
+            color: white;
+            border-color: var(--steel-blue);
+        }
+
+        .btn-email:hover {
+            background: transparent;
+            color: var(--steel-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(74, 95, 127, 0.3);
+        }
+
+        .btn-sms {
+            background: var(--charcoal);
+            color: var(--secondary-gold);
+            border-color: var(--secondary-gold);
+        }
+
+        .btn-sms:hover {
+            background: var(--secondary-gold);
+            color: var(--charcoal);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 168, 67, 0.3);
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border: 2px solid var(--secondary-gold);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(212, 168, 67, 0.2);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--secondary-gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(212, 168, 67, 0.3);
+        }
+
+        .info-content h4 {
+            color: var(--secondary-gold);
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+        .info-content p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            height: 500px;
+            border: 4px solid var(--secondary-gold);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0e14;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 4px solid var(--secondary-gold);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-tagline {
+            font-size: 1.8rem;
+            font-family: 'Bebas Neue', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--secondary-gold);
+            letter-spacing: 3px;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .footer-copyright {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 90px;
+                flex-direction: column;
+                background: var(--primary-navy);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.3);
+                padding: 2rem 0;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-highlight {
+                font-size: 3rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-item img {
+                height: 400px;
+            }
+
+            .carousel-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            .carousel-btn.prev {
+                left: 10px;
+            }
+
+            .carousel-btn.next {
+                right: 10px;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-highlight {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .carousel-item img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="img/logo.png" alt="Almanza Remodeling LLC Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>Almanza Remodeling LLC</h1>
+                    <p>18 Years of Craftsmanship</p>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>
+                    Building Excellence
+                    <span class="hero-highlight">For 18 Years</span>
+                </h2>
+                <p class="hero-tagline">Craftsmanship You Can Trust</p>
+                <p class="hero-description">
+                    Almanza Remodeling LLC is a full-service remodeling company delivering high-quality construction, 
+                    renovation, and property improvement solutions. Led by owner Mario Almanza, we bring nearly two 
+                    decades of hands-on experience, reliability, and commitment to excellence in every project we undertake.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-hard-hat"></i></div>
+                        <div class="stat-number">18+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Quality Work</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="stat-number">Licensed</div>
+                        <div class="stat-label">& Insured</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero.jpg" alt="Professional Remodeling Services">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="section-header">
+                <h2>Who We Are</h2>
+                <p class="section-subtitle">Built on Craftsmanship, Reliability, and Integrity</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-box">
+                        <h3><i class="fas fa-building"></i> Our Company</h3>
+                        <p>
+                            Almanza Remodeling LLC is a trusted remodeling and property improvement company proudly serving 
+                            homeowners with over 18 years of hands-on experience in the construction industry. Led by owner 
+                            Mario Alberto Almanza, our company is built on a strong foundation of craftsmanship, responsibility, 
+                            and commitment to excellence.
+                        </p>
+                    </div>
+                    <div class="about-box">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>
+                            Our mission is to provide high-quality remodeling and property improvement services that enhance 
+                            the comfort, beauty, and value of every home we work on, while delivering dependable service and 
+                            exceeding our clients' expectations.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-box">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>
+                            Our vision is to become a leading remodeling company recognized for craftsmanship, reliability, 
+                            and integrity, helping homeowners create spaces they are proud to live in for years to come.
+                        </p>
+                    </div>
+                    <div class="about-box">
+                        <h3><i class="fas fa-heart"></i> Our Approach</h3>
+                        <p>
+                            We focus on delivering complete remodeling solutions, handling projects from start to finish with 
+                            professionalism and care. At Almanza Remodeling LLC, we believe quality work, honest communication, 
+                            and consistent results are the keys to long-term client relationships.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>Why Choose Us</h2>
+            </div>
+
+            <div class="why-choose">
+                <div class="benefit-card">
+                    <h4><i class="fas fa-medal"></i> Quality Workmanship</h4>
+                    <p>We treat every project as if it were our own home, ensuring excellence in every detail</p>
+                </div>
+                <div class="benefit-card">
+                    <h4><i class="fas fa-clock"></i> Reliable & On-Time</h4>
+                    <p>We value your time and deliver according to schedule with transparent communication</p>
+                </div>
+                <div class="benefit-card">
+                    <h4><i class="fas fa-dollar-sign"></i> Affordable Prices</h4>
+                    <p>Competitive rates with guaranteed satisfaction and no hidden fees</p>
+                </div>
+                <div class="benefit-card">
+                    <h4><i class="fas fa-shield-check"></i> Fully Insured</h4>
+                    <p>You can trust our licensed, insured, and experienced professional team</p>
+                </div>
+                <div class="benefit-card">
+                    <h4><i class="fas fa-user-tie"></i> Customer-Focused</h4>
+                    <p>We listen, adapt, and exceed expectations on every single project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p class="section-subtitle">Comprehensive Remodeling Solutions for Your Home</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon"><i class="fas fa-home"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Full Remodeling</h3>
+                        <ul>
+                            <li>Complete home remodeling</li>
+                            <li>Interior renovations</li>
+                            <li>Exterior renovations</li>
+                            <li>Property upgrades</li>
+                            <li>Space improvements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon"><i class="fas fa-sink"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Kitchen & Bathroom</h3>
+                        <ul>
+                            <li>Complete kitchen remodeling</li>
+                            <li>Shower installations</li>
+                            <li>Bathroom renovations</li>
+                            <li>Custom finishes</li>
+                            <li>Functional layouts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon"><i class="fas fa-border-all"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Flooring Installation</h3>
+                        <ul>
+                            <li>Laminate flooring</li>
+                            <li>Ceramic tile</li>
+                            <li>LVT flooring</li>
+                            <li>Vinyl flooring</li>
+                            <li>Carpet installation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Painting Services</h3>
+                        <ul>
+                            <li>Interior painting</li>
+                            <li>Exterior painting</li>
+                            <li>Color changes</li>
+                            <li>Surface preparation</li>
+                            <li>Professional finish work</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon"><i class="fas fa-warehouse"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Roofing & Exterior</h3>
+                        <ul>
+                            <li>Roofing installation & repairs</li>
+                            <li>Pergola construction</li>
+                            <li>Fence installation</li>
+                            <li>Synthetic turf installation</li>
+                            <li>Outdoor improvements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Maintenance & More</h3>
+                        <ul>
+                            <li>Property maintenance</li>
+                            <li>Preventive services</li>
+                            <li>Residential cleaning</li>
+                            <li>Junk removal</li>
+                            <li>Post-project cleanup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-container">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <p class="section-subtitle">See the Quality and Precision in Every Project</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-inner" id="carouselInner">
+                        <div class="carousel-item"><img src="img/1.jpeg" alt="Project 1"></div>
+                        <div class="carousel-item"><img src="img/2.jpeg" alt="Project 2"></div>
+                        <div class="carousel-item"><img src="img/3.jpeg" alt="Project 3"></div>
+                        <div class="carousel-item"><img src="img/4.jpeg" alt="Project 4"></div>
+                        <div class="carousel-item"><img src="img/5.jpeg" alt="Project 5"></div>
+                        <div class="carousel-item"><img src="img/6.jpeg" alt="Project 6"></div>
+                        <div class="carousel-item"><img src="img/7.jpeg" alt="Project 7"></div>
+                        <div class="carousel-item"><img src="img/8.jpeg" alt="Project 8"></div>
+                        <div class="carousel-item"><img src="img/9.jpeg" alt="Project 9"></div>
+                        <div class="carousel-item"><img src="img/10.jpeg" alt="Project 10"></div>
+                        <div class="carousel-item"><img src="img/11.jpeg" alt="Project 11"></div>
+                        <div class="carousel-item"><img src="img/12.jpeg" alt="Project 12"></div>
+                        <div class="carousel-item"><img src="img/13.jpeg" alt="Project 13"></div>
+                        <div class="carousel-item"><img src="img/14.jpeg" alt="Project 14"></div>
+                        <div class="carousel-item"><img src="img/15.jpeg" alt="Project 15"></div>
+                        <div class="carousel-item"><img src="img/16.jpeg" alt="Project 16"></div>
+                        <div class="carousel-item"><img src="img/17.jpeg" alt="Project 17"></div>
+                        <div class="carousel-item"><img src="img/18.jpeg" alt="Project 18"></div>
+                        <div class="carousel-item"><img src="img/19.jpeg" alt="Project 19"></div>
+                        <div class="carousel-item"><img src="img/20.jpeg" alt="Project 20"></div>
+                        <div class="carousel-item"><img src="img/21.jpeg" alt="Project 21"></div>
+                        <div class="carousel-item"><img src="img/22.jpeg" alt="Project 22"></div>
+                        <div class="carousel-item"><img src="img/23.jpeg" alt="Project 23"></div>
+                        <div class="carousel-item"><img src="img/24.jpeg" alt="Project 24"></div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-counter">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="section-header light">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Ready to Transform Your Home? Let's Start Your Project</p>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-buttons">
+                        <a href="tel:8178623947" class="contact-btn btn-call">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Call Now</span>
+                        </a>
+                        <a href="https://wa.me/18178623947" class="contact-btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:almanzaremodeling@hotmail.com" class="contact-btn btn-email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email Us</span>
+                        </a>
+                        <a href="sms:8178623947" class="contact-btn btn-sms">
+                            <i class="fas fa-sms"></i>
+                            <span>Send SMS</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-user"></i></div>
+                            <div class="info-content">
+                                <h4>Owner</h4>
+                                <p>Mario Almanza</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p>817-862-3947</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>almanzaremodeling@hotmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-content">
+                                <h4>Address</h4>
+                                <p>Roberts Cut Off Rd, Suite 100<br>Fort Worth, TX 76114</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.7884!2d-97.3856!3d32.7357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7c5c5c5c5c5c%3A0x5c5c5c5c5c5c5c5c!2sRoberts%20Cut%20Off%20Rd%2C%20Fort%20Worth%2C%20TX%2076114!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-tagline">18 Years of Craftsmanship You Can Trust</p>
+            <p class="footer-text">
+                Professional remodeling, renovation, and property improvement services in Fort Worth, TX. 
+                Licensed, insured, and committed to excellence in every project we complete.
+            </p>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Almanza Remodeling LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 90;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Carousel functionality
+        let currentIndex = 0;
+        const carouselInner = document.getElementById('carouselInner');
+        const items = document.querySelectorAll('.carousel-item');
+        const totalSlides = items.length;
+        const currentSlideSpan = document.getElementById('currentSlide');
+        const totalSlidesSpan = document.getElementById('totalSlides');
+
+        totalSlidesSpan.textContent = totalSlides;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselInner.style.transform = `translateX(${offset}%)`;
+            currentSlideSpan.textContent = currentIndex + 1;
+        }
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                moveCarousel(-1);
+            } else if (e.key === 'ArrowRight') {
+                moveCarousel(1);
+            }
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const carousel = document.querySelector('.carousel');
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                moveCarousel(1);
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveCarousel(-1);
+            }
+        }
+    </script>
+
+</body>
+</html>
